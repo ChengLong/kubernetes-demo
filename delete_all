@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+
+kubectl delete deployments,services -l "app in (redis, nodejs)"
