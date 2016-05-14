@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 set -e
 
-kubectl create -f redis-service.yaml
-kubectl create -f redis-deployment.yaml
-
-kubectl create -f nodejs-service.yaml
-kubectl create -f nodejs-deployment.yaml
+kubectl create -f backend.yaml
+kubectl create -f frontend.yaml
