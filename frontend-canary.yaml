@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: frontend-canary
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nodejs
+        tier: frontend
+        track: canary
+    spec:
+      containers:
+        - name: nodejs
+          image: chenglong/simple-node:v2
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          env:
+            - name: GET_HOSTS_FROM
+              value: dns
+          ports:
+            - containerPort: 8080
