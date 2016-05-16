@@ -17,10 +17,10 @@ This is a demo app to showcase orchestrating Docker with Kubernetes. You can fin
 
 3. Self-healing
 
-Delete a random pod and see Kubernetes creates a new one.
-```
-kubectl delete pod frontend-2747139405-bk4ul; kubectl get pods
-```
+  Delete a random pod and see Kubernetes creates a new one.
+  ```
+  kubectl delete pod frontend-2747139405-bk4ul; kubectl get pods
+  ```
 
 4. Scaling
 
